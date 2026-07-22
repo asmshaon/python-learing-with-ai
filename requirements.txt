@@ -1,0 +1,18 @@
+# Needed only for later sections (Libraries + Machine Learning + Databases).
+# Basics / OOP / File Handling / DSA use only the standard library.
+#
+# Install into a virtual environment:
+#   python3 -m venv .venv
+#   source .venv/bin/activate
+#   pip install -r requirements.txt
+
+numpy
+pandas
+scipy
+matplotlib
+scikit-learn
+Django
+
+# Databases (uncomment when you reach section 07):
+# mysql-connector-python
+# pymongo
