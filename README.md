@@ -49,7 +49,7 @@ you learn, or ask Claude to work through them with you.
 | 04  | Variables         | ✅     |
 | 05  | Data Types        | ✅     |
 | 06  | Numbers           | ✅     |
-| 07  | Casting           | ⬜     |
+| 07  | Casting           | ✅     |
 | 08  | Strings           | ⬜     |
 | 09  | Booleans          | ⬜     |
 | 10  | Operators         | ⬜     |
@@ -94,4 +94,5 @@ chapters, so they don't get a file: Python Home, Intro, Get Started,
 Certificate, Reference, Module Reference, How To, Examples, Compiler,
 Exercises, Quiz, Challenges, Practice Problems, Server, Syllabus, Study Plan,
 Interview Q&A, Bootcamp, Training.
+
 # python-learing-with-ai

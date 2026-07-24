@@ -45,9 +45,18 @@ Run:  python3 chapters/01_basics/08_strings.py
 # (Test with "programming"
 #  -> expected ('pro', 'ing', 'pormig', 'gnimmargorp', 'a'))
 # ---------------------------------------------------------------------------
+from operator import le
+import re
+
+
 def problem_1(s="programming"):
-    # your solution here
-    pass
+    return (
+        s[:3],
+        s[-3:],
+        s[::2],
+        s[::-1],
+        s[len(s) // 2]
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -65,8 +74,16 @@ def problem_1(s="programming"):
 #               'joined': 'the-quick-brown-fox'})
 # ---------------------------------------------------------------------------
 def problem_2(sentence="  The quick brown Fox  "):
-    # your solution here
-    pass
+    setResult = {}
+
+    setResult['clean'] = sentence
+    setResult['words'] = sentence.strip().split(" ")
+    setResult['count'] = len(setResult['words'])
+    setResult['longest'] = max(setResult['words'], key=len)
+    setResult['joined'] = "-".join(setResult['words'])
+
+    return setResult
+    
 
 
 # ---------------------------------------------------------------------------
@@ -77,8 +94,8 @@ def problem_2(sentence="  The quick brown Fox  "):
 # (Test defaults: "Never odd or even" -> True, and try "python" -> False)
 # ---------------------------------------------------------------------------
 def problem_3(s="Never odd or even"):
-    # your solution here
-    pass
+    return s[::-1] == s.lower().replace(" ", "")
+    
 
 
 if __name__ == "__main__":

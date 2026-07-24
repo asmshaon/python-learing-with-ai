@@ -45,8 +45,13 @@ Run:  python3 chapters/01_basics/07_casting.py
 # (expected (42, 2.5, '3.14', 9, -9))
 # ---------------------------------------------------------------------------
 def problem_1():
-    # your solution here
-    pass
+    return (
+        int("42"),
+        float("2.5"),
+        str(3.14),
+        int(9.99),
+        int(-9.99)
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -57,8 +62,7 @@ def problem_1():
 #  -> expected [False, True, False, True, True, False, True, False, False])
 # ---------------------------------------------------------------------------
 def problem_2(values=(0, 1, "", "0", "False", [], [0], None, 0.0)):
-    # your solution here
-    pass
+    return [bool(value) for value in values]
 
 
 # ---------------------------------------------------------------------------
@@ -74,9 +78,15 @@ def problem_2(values=(0, 1, "", "0", "False", [], [0], None, 0.0)):
 #  -> expected {'10': 10, 'abc': None, '-3': -3, '4.2': None, '007': 7})
 # ---------------------------------------------------------------------------
 def problem_3(strings=("10", "abc", "-3", "4.2", "007")):
-    # your solution here
-    pass
+    result = {}
 
+    for s in strings:
+        try:
+            result[s] = int(s)
+        except ValueError:
+            result[s] = None
+
+    return result
 
 if __name__ == "__main__":
     print("Problem 1 (round-trip):", problem_1())
