@@ -50,10 +50,10 @@ you learn, or ask Claude to work through them with you.
 | 05  | Data Types        | ✅     |
 | 06  | Numbers           | ✅     |
 | 07  | Casting           | ✅     |
-| 08  | Strings           | ⬜     |
-| 09  | Booleans          | ⬜     |
-| 10  | Operators         | ⬜     |
-| 11  | Lists             | ⬜     |
+| 08  | Strings           | ✅     |
+| 09  | Booleans          | ✅     |
+| 10  | Operators         | ✅     |
+| 11  | Lists             | ✅     |
 | 12  | Tuples            | ⬜     |
 | 13  | Sets              | ⬜     |
 | 14  | Dictionaries      | ⬜     |
