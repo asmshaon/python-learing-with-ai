@@ -51,9 +51,15 @@ Run:  python3 chapters/01_basics/13_sets.py
 # (Test with ["b", "a", "b", "c", "a", "a"]
 #  -> expected (['b', 'a', 'c'], 3))
 # ---------------------------------------------------------------------------
+import string
+
+
 def problem_1(items=("b", "a", "b", "c", "a", "a")):
-    # TODO
-    pass
+    return (
+        set(items),
+        len(items) - len(set(items))
+    )   
+
 
 
 # ---------------------------------------------------------------------------
@@ -73,8 +79,17 @@ def problem_1(items=("b", "a", "b", "c", "a", "a")):
 #               'exactly_one': ['ana', 'dee'], 'disjoint': False})
 # ---------------------------------------------------------------------------
 def problem_2(first=("ana", "bob", "cid"), second=("bob", "cid", "dee")):
-    # TODO
-    pass
+    a = set(first)
+    b = set(second)
+    
+    return {
+        "both" : sorted(a.intersection(b)),
+        "only_first" : sorted(a.difference(b)),
+        "only_second" : sorted(b.difference(a)),
+        "either" : sorted(a.union(b)),
+        "exactly_one" : sorted(a.symmetric_difference(b)),
+        "disjoint" : a.isdisjoint(b)
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -89,8 +104,15 @@ def problem_2(first=("ana", "bob", "cid"), second=("bob", "cid", "dee")):
 #  -> 'count': 15, 'pangram': False, and 'missing' holds the other 11 letters)
 # ---------------------------------------------------------------------------
 def problem_3(sentence="The quick brown fox"):
-    # TODO
-    pass
+    letters = {c.lower() for c in sentence if c.isalpha()}
+    alphabet = set(string.ascii_lowercase)
+
+    return {
+        "letters" : letters,
+        "count": len(letters),
+        "missing": alphabet.difference(letters),
+        "pangram": len(alphabet) == len(letters)
+    }
 
 
 if __name__ == "__main__":

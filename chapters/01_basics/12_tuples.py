@@ -49,8 +49,16 @@ Run:  python3 chapters/01_basics/12_tuples.py
 #   - the tuple ("hi",) repeated 3 times
 # (Expected (42,), <class 'int'>, ('a', 'b', 'c'), ('hi', 'hi', 'hi'))
 # ---------------------------------------------------------------------------
+from pyparsing import Word
+
+
 def problem_1():
-    
+      return (
+           (42, ),
+           type((42)),
+           ("a", "b", ) + ("c", ),
+           ("hi", ) * 3,
+      )
 
 
 # ---------------------------------------------------------------------------
@@ -66,8 +74,14 @@ def problem_1():
 #               'swapped': (40, 10)})
 # ---------------------------------------------------------------------------
 def problem_2(values=(10, 20, 30, 40)):
-    # TODO
-    pass
+      first, *middle, last = values
+
+      return {
+            "first" : first,
+            "last" : last,
+            "middle" : middle,
+            "swapped": (last, first)
+      }
 
 
 # ---------------------------------------------------------------------------
@@ -83,8 +97,14 @@ def problem_2(values=(10, 20, 30, 40)):
 #               ('red', 'blue', 'green', 'red', 'yellow')))
 # ---------------------------------------------------------------------------
 def problem_3(words=("red", "green", "red", "yellow")):
-    # TODO
-    pass
+    words_list = list(words)
+    words_list.insert(1, "blue")
+
+    return (
+         sorted(words),
+         tuple(word for word in words if word != "red"),
+         tuple(words_list)
+    )
 
 
 if __name__ == "__main__":
