@@ -135,8 +135,6 @@ def problem_3(grades={"ana": [90, 80], "bob": [50, 55]}):
           ret_str += f"{k} average {v} passed {pass_dicts[k]} "
 
 
-      print(avg_dicts.values())
-
       class_avg = sum(avg_dicts.values()) / len(avg_dicts)
 
       ret_str += f"class_average {class_avg:.1f}"
