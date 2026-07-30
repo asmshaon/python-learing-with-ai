@@ -54,13 +54,13 @@ you learn, or ask Claude to work through them with you.
 | 09  | Booleans          | ✅     |
 | 10  | Operators         | ✅     |
 | 11  | Lists             | ✅     |
-| 12  | Tuples            | ⬜     |
-| 13  | Sets              | ⬜     |
-| 14  | Dictionaries      | ⬜     |
-| 15  | If...Else         | ⬜     |
-| 16  | Match             | ⬜     |
-| 17  | While Loops       | ⬜     |
-| 18  | For Loops         | ⬜     |
+| 12  | Tuples            | ✅     |
+| 13  | Sets              | ✅     |
+| 14  | Dictionaries      | ✅     |
+| 15  | If...Else         | ✅     |
+| 16  | Match             | ✅     |
+| 17  | While Loops       | ✅     |
+| 18  | For Loops         | ✅     |
 | 19  | Functions         | ⬜     |
 | 20  | Range             | ⬜     |
 | 21  | Arrays            | ⬜     |
