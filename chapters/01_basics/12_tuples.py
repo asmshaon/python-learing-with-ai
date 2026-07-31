@@ -39,7 +39,6 @@ Notes
 Run:  python3 chapters/01_basics/12_tuples.py
 """
 
-
 # ---------------------------------------------------------------------------
 # Problem 1: Tuple basics and the one-item trap
 # Build and return a tuple of four items, in this order:
@@ -53,12 +52,16 @@ from pyparsing import Word
 
 
 def problem_1():
-      return (
-           (42, ),
-           type((42)),
-           ("a", "b", ) + ("c", ),
-           ("hi", ) * 3,
-      )
+    return (
+        (42,),
+        type((42)),
+        (
+            "a",
+            "b",
+        )
+        + ("c",),
+        ("hi",) * 3,
+    )
 
 
 # ---------------------------------------------------------------------------
@@ -74,14 +77,9 @@ def problem_1():
 #               'swapped': (40, 10)})
 # ---------------------------------------------------------------------------
 def problem_2(values=(10, 20, 30, 40)):
-      first, *middle, last = values
+    first, *middle, last = values
 
-      return {
-            "first" : first,
-            "last" : last,
-            "middle" : middle,
-            "swapped": (last, first)
-      }
+    return {"first": first, "last": last, "middle": middle, "swapped": (last, first)}
 
 
 # ---------------------------------------------------------------------------
@@ -101,9 +99,9 @@ def problem_3(words=("red", "green", "red", "yellow")):
     words_list.insert(1, "blue")
 
     return (
-         sorted(words),
-         tuple(word for word in words if word != "red"),
-         tuple(words_list)
+        sorted(words),
+        tuple(word for word in words if word != "red"),
+        tuple(words_list),
     )
 
 

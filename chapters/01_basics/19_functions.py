@@ -49,7 +49,6 @@ Notes
 Run:  python3 chapters/01_basics/19_functions.py
 """
 
-
 # ---------------------------------------------------------------------------
 # Problem 1: Defaults, keyword arguments and *args
 # Write a function that builds a receipt line for an order. It takes an item
@@ -77,11 +76,11 @@ def problem_1(item="pens", *prices, currency="$", discount=0.0):
     total = round(subtotal - subtotal * discount, 2)
 
     return {
-        "item" : item,
-        "count" : len(prices),
-        "subtotal" : subtotal,
-        "total" : total,
-        "label" : f"{item} x{len(prices)} = {currency}{total:.2f}",
+        "item": item,
+        "count": len(prices),
+        "subtotal": subtotal,
+        "total": total,
+        "label": f"{item} x{len(prices)} = {currency}{total:.2f}",
     }
 
 
@@ -100,18 +99,21 @@ def problem_1(item="pens", *prices, currency="$", discount=0.0):
 # (Expected: {'buggy': ['a', 'b', 'c'], 'fixed': ['c'], 'shared': True})
 # ---------------------------------------------------------------------------
 
-def add_log_buggy(value, logs = []):
+
+def add_log_buggy(value, logs=[]):
     logs.append(value)
 
     return logs
 
-def add_log_fixed(value, logs = None):
+
+def add_log_fixed(value, logs=None):
     if logs is None:
         logs = []
-    
+
     logs.append(value)
 
     return logs
+
 
 def problem_2():
     first_buggy = add_log_buggy("a")
@@ -123,9 +125,9 @@ def problem_2():
     third_fixed = add_log_fixed("c")
 
     return {
-        "buggy" : third_buggy,
-        "fixed" : third_fixed,
-        "shared" : first_buggy is second_buggy
+        "buggy": third_buggy,
+        "fixed": third_fixed,
+        "shared": first_buggy is second_buggy,
     }
 
 
@@ -144,12 +146,10 @@ def problem_2():
 #               'mapped': [9, 1, 16, 1, 25]})
 # ---------------------------------------------------------------------------
 
-def stats(list = []):
-    return (
-        min(list),
-        max(list),
-        mean(list)
-    )
+
+def stats(list=[]):
+    return (min(list), max(list), mean(list))
+
 
 def my_factorial(n=0):
     if n <= 1:
@@ -158,16 +158,18 @@ def my_factorial(n=0):
     return n * my_factorial(n - 1)
 
 
-
 def problem_3(numbers=(3, 1, 4, 1, 5), n=5):
     return {
-        "stats" : stats(numbers),
-        "factorial" : my_factorial(n),
-        "mapped" : [n*n for n in numbers]
+        "stats": stats(numbers),
+        "factorial": my_factorial(n),
+        "mapped": [n * n for n in numbers],
     }
 
 
 if __name__ == "__main__":
-    print("Problem 1 (args/kwargs/defaults):", problem_1("pens", 5.0, 4.0, 5.0, discount=0.1))
+    print(
+        "Problem 1 (args/kwargs/defaults):",
+        problem_1("pens", 5.0, 4.0, 5.0, discount=0.1),
+    )
     print("Problem 2 (mutable default trap):", problem_2())
     print("Problem 3 (returns/recursion/lambda):", problem_3())

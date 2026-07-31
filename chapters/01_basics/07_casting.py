@@ -45,13 +45,7 @@ Run:  python3 chapters/01_basics/07_casting.py
 # (expected (42, 2.5, '3.14', 9, -9))
 # ---------------------------------------------------------------------------
 def problem_1():
-    return (
-        int("42"),
-        float("2.5"),
-        str(3.14),
-        int(9.99),
-        int(-9.99)
-    )
+    return (int("42"), float("2.5"), str(3.14), int(9.99), int(-9.99))
 
 
 # ---------------------------------------------------------------------------
@@ -87,6 +81,7 @@ def problem_3(strings=("10", "abc", "-3", "4.2", "007")):
             result[s] = None
 
     return result
+
 
 if __name__ == "__main__":
     print("Problem 1 (round-trip):", problem_1())

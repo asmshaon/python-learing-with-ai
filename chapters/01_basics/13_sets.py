@@ -41,7 +41,6 @@ Notes
 Run:  python3 chapters/01_basics/13_sets.py
 """
 
-
 # ---------------------------------------------------------------------------
 # Problem 1: Deduplicate while keeping order
 # Given a list of items, return a tuple of two things:
@@ -55,11 +54,7 @@ import string
 
 
 def problem_1(items=("b", "a", "b", "c", "a", "a")):
-    return (
-        set(items),
-        len(items) - len(set(items))
-    )   
-
+    return (set(items), len(items) - len(set(items)))
 
 
 # ---------------------------------------------------------------------------
@@ -81,14 +76,14 @@ def problem_1(items=("b", "a", "b", "c", "a", "a")):
 def problem_2(first=("ana", "bob", "cid"), second=("bob", "cid", "dee")):
     a = set(first)
     b = set(second)
-    
+
     return {
-        "both" : sorted(a.intersection(b)),
-        "only_first" : sorted(a.difference(b)),
-        "only_second" : sorted(b.difference(a)),
-        "either" : sorted(a.union(b)),
-        "exactly_one" : sorted(a.symmetric_difference(b)),
-        "disjoint" : a.isdisjoint(b)
+        "both": sorted(a.intersection(b)),
+        "only_first": sorted(a.difference(b)),
+        "only_second": sorted(b.difference(a)),
+        "either": sorted(a.union(b)),
+        "exactly_one": sorted(a.symmetric_difference(b)),
+        "disjoint": a.isdisjoint(b),
     }
 
 
@@ -108,10 +103,10 @@ def problem_3(sentence="The quick brown fox"):
     alphabet = set(string.ascii_lowercase)
 
     return {
-        "letters" : letters,
+        "letters": letters,
         "count": len(letters),
         "missing": alphabet.difference(letters),
-        "pangram": len(alphabet) == len(letters)
+        "pangram": len(alphabet) == len(letters),
     }
 
 

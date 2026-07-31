@@ -62,8 +62,32 @@ Run:  python3 chapters/01_basics/21_arrays.py
 #               'indexed': ['0:21.5', '1:19.0', '2:24.5', '3:22.0']})
 # ---------------------------------------------------------------------------
 def problem_1(readings=(21.5, 19.0, 24.5, 22.0)):
-    # TODO: your solution here
-    pass
+    length = len(readings)
+    last = None
+    highest = readings[0]
+    average = 0
+
+    total = 0
+
+    for v in readings:
+        last = v
+
+        if v > highest:
+            highest = v
+
+        total += v
+
+    average = round(total / length, 1)
+
+    return {
+        "length": length,
+        "first": readings[0],
+        "last": last,
+        "highest": highest,
+        "average": average,
+        "above": [r for r in readings if r > average],
+        "indexed": [f"{i}:{r}" for i, r in enumerate(readings)],
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -78,12 +102,32 @@ def problem_1(readings=(21.5, 19.0, 24.5, 22.0)):
 #   "popped"   -> the item pop() returned
 #   "original" -> the original array after the alias was modified
 #   "aliased"  -> True if the alias and the original are the same object
-# (Expected: {'changed': ['ford', 'opel'], 'popped': 'audi',
+# (Expected: {'changed': ["ford", "kia", "opel"], 'popped': 'audi',
 #             'original': ['ford', 'bmw', 'kia', 'tesla'], 'aliased': True})
 # ---------------------------------------------------------------------------
 def problem_2():
-    # TODO: your solution here
-    pass
+    cars = ["ford", "bmw", "kia"]
+
+    cars_copy = cars.copy()
+
+    cars_copy.append("audi")
+    cars_copy.insert(1, "opel")
+    cars_copy.remove("bmw")
+
+    last_item = cars_copy.pop()
+
+    cars_copy.sort()
+
+    cars_alias = cars
+
+    cars_alias.append("tesla")
+
+    return {
+        "changed": cars_copy,
+        "popped": last_item,
+        "original": cars,
+        "aliased": cars_alias is cars,
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -100,8 +144,28 @@ def problem_2():
 #  -> grid [[0, 1], [2, 3], [4, 5]], row_sums [1, 5, 9], column [0, 2, 4])
 # ---------------------------------------------------------------------------
 def problem_3(numbers=(10, 20, 30, 40, 50, 60), rows=3, cols=2):
-    # TODO: your solution here
-    pass
+    numbers = list(numbers)
+    twod_array = [[row * cols + col for col in range(cols)] for row in range(rows)]
+
+    row_sums = []
+    column = []
+
+    for row in range(rows):
+        sum = 0
+        for col in range(cols):
+            sum += twod_array[row][col]
+
+        row_sums.append(sum)
+
+    return {
+        "head": numbers[:3],
+        "evens_pos": numbers[::2],
+        "backwards": numbers[::-1],
+        "tail": numbers[-2::],
+        "grid": twod_array,
+        "row_sums": row_sums,
+        "column": [row[0] for row in twod_array],
+    }
 
 
 if __name__ == "__main__":

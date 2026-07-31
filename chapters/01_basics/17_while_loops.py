@@ -33,7 +33,6 @@ Notes
 Run:  python3 chapters/01_basics/17_while_loops.py
 """
 
-
 # ---------------------------------------------------------------------------
 # Problem 1: Countdown and accumulate
 # Using a while loop (no for, no sum), count DOWN from n to 1 and return a
@@ -58,11 +57,7 @@ def problem_1(n=5):
         steps += 1
         n -= 1
 
-    return {
-        'sequence' : sequence_list,
-        'total' : total,
-        'steps' : steps
-    }
+    return {"sequence": sequence_list, "total": total, "steps": steps}
 
 
 # ---------------------------------------------------------------------------
@@ -82,29 +77,24 @@ def problem_2(numbers=[4, -1, 6, 0, 99]):
     checked = 0
     stoped_early = True
 
-
     i = 0
     while len(numbers) > i:
         checked += 1
-        
+
         if numbers[i] < 0:
-            i +=1
+            i += 1
             continue
-        
+
         total += numbers[i]
 
         if numbers[i] == 0:
             break
 
-        i +=1
+        i += 1
     else:
         stoped_early = False
 
-    return {
-        'total': total,
-        'checked': checked, 
-        'stopped_early': stoped_early
-    }
+    return {"total": total, "checked": checked, "stopped_early": stoped_early}
 
 
 # ---------------------------------------------------------------------------
@@ -129,12 +119,12 @@ def problem_3(n=6):
     i = 0
     while n > 1:
         if steps >= 1000:
-          return {
-              "path": path,
-              "steps": -1,
-              "peak": peak,
-          }
-        
+            return {
+                "path": path,
+                "steps": -1,
+                "peak": peak,
+            }
+
         if n % 2 == 0:
             n //= 2
         else:
@@ -146,12 +136,12 @@ def problem_3(n=6):
 
         steps += 1
 
-
     return {
         "path": path,
         "steps": steps,
         "peak": peak,
     }
+
 
 # ---------------------------------------------------------------------------
 # Problem 1: Hailstone Until Target
@@ -178,33 +168,33 @@ def problem_3(n=6):
 def problem_4(n=25):
     if n < 1:
         raise ValueError("n must be at least 1")
-    
+
     path = [n]
     steps = 0
     lowest = n
     finished = False
 
     while n >= 1:
-      if steps == 100:
-          break
+        if steps == 100:
+            break
 
-      if n % 5 == 0:
-          n //= 5
-      else:
-          n -= 2
+        if n % 5 == 0:
+            n //= 5
+        else:
+            n -= 2
 
-      lowest = min(lowest, n)
+        lowest = min(lowest, n)
 
-      path.append(n)
+        path.append(n)
 
-      steps += 1
+        steps += 1
 
-      if n == 1:
-          finished = True
-          break
+        if n == 1:
+            finished = True
+            break
 
-      if n < 1:
-          break
+        if n < 1:
+            break
     else:
         finished = True
 
@@ -245,7 +235,7 @@ def problem_4(n=25):
 #   "max_streak": 4
 # }
 # ---------------------------------------------------------------------------
-def problem_5(numbers=[2,4,6,8,3]):
+def problem_5(numbers=[2, 4, 6, 8, 3]):
     found = False
     checked = 0
     max_streak = 0
@@ -256,7 +246,7 @@ def problem_5(numbers=[2,4,6,8,3]):
         checked += 1
         num = numbers[i]
 
-        if num % 2 != 0:        
+        if num % 2 != 0:
             consecutive_count = 0
         else:
             consecutive_count += 1
@@ -266,15 +256,11 @@ def problem_5(numbers=[2,4,6,8,3]):
         if max_streak == 4:
             found = True
             break
-        
+
         i += 1
 
-    return {
-        "found" : found,
-        "checked" : checked,
-        "max_streak" : max_streak
-    }
-    
+    return {"found": found, "checked": checked, "max_streak": max_streak}
+
 
 if __name__ == "__main__":
     print("Problem 1 (countdown):", problem_1())

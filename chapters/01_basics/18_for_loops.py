@@ -103,11 +103,7 @@ def problem_3(numbers=(4, 8, 15, 16), target=15):
     else:
         index = -1
 
-    return {
-        "found" : found,
-        "index" : index,
-        "seen_before" : seen_before
-    }
+    return {"found": found, "index": index, "seen_before": seen_before}
 
 
 if __name__ == "__main__":

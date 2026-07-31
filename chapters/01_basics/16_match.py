@@ -40,7 +40,6 @@ Notes
 Run:  python3 chapters/01_basics/16_match.py
 """
 
-
 # ---------------------------------------------------------------------------
 # Problem 1: Simple command dispatch
 # Given a command string, return a message using match/case:
@@ -84,7 +83,7 @@ def problem_2(point=(-1, 4)):
             return "origin missing"
         case (0, 0):
             return "origin"
-        case (x, 0): 
+        case (x, 0):
             return f"on the x axis at {x}"
         case (0, y):
             return f"on the y axis at {y}"
@@ -123,6 +122,7 @@ def problem_3(event={"type": "click", "x": 3, "y": 9, "button": "left"}):
             return f"unhandled: {event_type}"
         case _:
             return "not an event"
+
 
 if __name__ == "__main__":
     print("Problem 1 (commands):", problem_1())

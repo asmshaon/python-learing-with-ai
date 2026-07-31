@@ -32,7 +32,6 @@ Notes
 Run:  python3 chapters/01_basics/05_data_types.py
 """
 
-
 # ---------------------------------------------------------------------------
 # Problem 1: Identify the type
 # Return the NAME of each value's type as a list of strings, in the same order
@@ -67,7 +66,7 @@ def problem_2(values=([1], (1,), {1}, "hi", {"a": 1}, 5)):
     for value in values:
         nt = type(value).__name__
         miDic[nt] = nt in mutable_types
-    
+
     return miDic
 
 
@@ -86,7 +85,7 @@ def problem_3(value=True):
         type(value) is int,
         isinstance(True, int),
         type(True) is bool,
-        isinstance(True, bool)
+        isinstance(True, bool),
     )
 
 

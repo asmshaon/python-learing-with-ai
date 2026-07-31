@@ -24,7 +24,6 @@ Notes
 Run:  python3 chapters/01_basics/03_comments.py
 """
 
-
 # ---------------------------------------------------------------------------
 # Problem 1: A function docstring
 # Give this function a docstring whose text is exactly:  Adds two numbers.
@@ -33,12 +32,13 @@ Run:  python3 chapters/01_basics/03_comments.py
 # (expected "Adds two numbers.")
 # ---------------------------------------------------------------------------
 
-def problem_1():
-  """
-  Adds two numbers.
-  """
 
-  return problem_1.__doc__.strip()
+def problem_1():
+    """
+    Adds two numbers.
+    """
+
+    return problem_1.__doc__.strip()
 
 
 # ---------------------------------------------------------------------------
@@ -51,7 +51,7 @@ def problem_2():
     total = 0
     for i in [1, 2, 3]:
         total += i
-        #total += 100  # BUG: comment this line out
+        # total += 100  # BUG: comment this line out
     return total
 
 

@@ -27,7 +27,6 @@ Notes
 Run:  python3 chapters/01_basics/04_variables.py
 """
 
-
 counter = 0
 
 
@@ -73,4 +72,3 @@ if __name__ == "__main__":
     print("Problem 1 (swap):", problem_1())
     print("Problem 2 (unpacking):", problem_2())
     print("Problem 3 (global):", problem_3())
- 

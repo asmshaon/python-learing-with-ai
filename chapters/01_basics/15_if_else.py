@@ -37,7 +37,6 @@ Notes
 Run:  python3 chapters/01_basics/15_if_else.py
 """
 
-
 # ---------------------------------------------------------------------------
 # Problem 1: Grade classifier
 # Given a score, return its letter grade using an if/elif/else chain:
@@ -61,9 +60,8 @@ def problem_1(score=-5):
         return "C"
     elif score >= 60 and score <= 69:
         return "D"
-    else: 
+    else:
         return "F"
-
 
 
 # ---------------------------------------------------------------------------
@@ -88,13 +86,12 @@ def problem_2(value=0):
         else:
             number_flag = "positive"
     else:
-         number_flag = "not a number"
-        
-    
+        number_flag = "not a number"
+
     return {
-        "truthy" : bool(value),
+        "truthy": bool(value),
         "kind": "filled" if value else "empty",
-        "sign" : number_flag,
+        "sign": number_flag,
     }
 
 
@@ -116,7 +113,7 @@ def problem_3(age=7, day="tuesday", member=True):
 
     if age < 5:
         base = 0
-    elif ( 5 <= age <= 17) or age >= 65:
+    elif (5 <= age <= 17) or age >= 65:
         base = 5
     else:
         base = 10
@@ -125,11 +122,7 @@ def problem_3(age=7, day="tuesday", member=True):
 
     final = round(after_day * 0.8, 2) if member else after_day
 
-    return { 
-        "base" : base,
-        "after_day" : after_day,
-        "final" : final
-    }
+    return {"base": base, "after_day": after_day, "final": final}
 
 
 if __name__ == "__main__":

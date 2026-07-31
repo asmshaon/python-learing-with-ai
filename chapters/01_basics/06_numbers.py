@@ -32,7 +32,6 @@ Notes
 Run:  python3 chapters/01_basics/06_numbers.py
 """
 
-
 # ---------------------------------------------------------------------------
 # Problem 1: Division operators
 # Given two numbers a and b, return a tuple of four results, in this order:
@@ -63,7 +62,7 @@ def problem_2():
     return (
         0.1 + 0.2 == 0.3,
         round(0.1 + 0.2, 10) == round(0.3, 10),
-        math.isclose(0.1 + 0.2, 0.3)
+        math.isclose(0.1 + 0.2, 0.3),
     )
 
 
@@ -82,11 +81,11 @@ def problem_2():
 def problem_3(numbers=(3, -7, 1.5, 10, -2)):
     myDic = {}
 
-    myDic['min'] = min(numbers)
-    myDic['max'] = max(numbers)
-    myDic['sum'] = sum(numbers)
-    myDic['mean'] = mean(numbers)
-    myDic['abs'] = [abs(v) for v in numbers]
+    myDic["min"] = min(numbers)
+    myDic["max"] = max(numbers)
+    myDic["sum"] = sum(numbers)
+    myDic["mean"] = mean(numbers)
+    myDic["abs"] = [abs(v) for v in numbers]
 
     return myDic
 

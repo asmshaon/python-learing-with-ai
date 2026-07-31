@@ -33,7 +33,6 @@ Notes
 Run:  python3 chapters/01_basics/08_strings.py
 """
 
-
 # ---------------------------------------------------------------------------
 # Problem 1: Slicing drills
 # Given a string, return a tuple of five slices, in this order:
@@ -50,13 +49,7 @@ import re
 
 
 def problem_1(s="programming"):
-    return (
-        s[:3],
-        s[-3:],
-        s[::2],
-        s[::-1],
-        s[len(s) // 2]
-    )
+    return (s[:3], s[-3:], s[::2], s[::-1], s[len(s) // 2])
 
 
 # ---------------------------------------------------------------------------
@@ -76,14 +69,13 @@ def problem_1(s="programming"):
 def problem_2(sentence="  The quick brown Fox  "):
     setResult = {}
 
-    setResult['clean'] = sentence
-    setResult['words'] = sentence.strip().split(" ")
-    setResult['count'] = len(setResult['words'])
-    setResult['longest'] = max(setResult['words'], key=len)
-    setResult['joined'] = "-".join(setResult['words'])
+    setResult["clean"] = sentence
+    setResult["words"] = sentence.strip().split(" ")
+    setResult["count"] = len(setResult["words"])
+    setResult["longest"] = max(setResult["words"], key=len)
+    setResult["joined"] = "-".join(setResult["words"])
 
     return setResult
-    
 
 
 # ---------------------------------------------------------------------------
@@ -95,7 +87,6 @@ def problem_2(sentence="  The quick brown Fox  "):
 # ---------------------------------------------------------------------------
 def problem_3(s="Never odd or even"):
     return s[::-1] == s.lower().replace(" ", "")
-    
 
 
 if __name__ == "__main__":

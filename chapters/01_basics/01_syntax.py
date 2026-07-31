@@ -25,11 +25,10 @@ Compare the printed output to what each problem asks for.
 # (Test with n = 7  -> expected "positive")
 # ---------------------------------------------------------------------------
 def problem_1(n=7):
-    if(n > 0) :
+    if n > 0:
         return "positive"
     else:
         return "non-positive"
-
 
 
 # ---------------------------------------------------------------------------
@@ -39,8 +38,8 @@ def problem_1(n=7):
 # ---------------------------------------------------------------------------
 def problem_2():
     age = 5
-    Age = 50 
-   
+    Age = 50
+
     return (age, Age)
 
 
@@ -52,7 +51,7 @@ def problem_2():
 # ---------------------------------------------------------------------------
 def problem_3(n=6):
     total = 0
-    for i in range(1, n+1):
+    for i in range(1, n + 1):
         if i % 2 == 0:
             total += i
 

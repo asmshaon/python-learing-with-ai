@@ -27,7 +27,6 @@ Notes
 Run:  python3 chapters/01_basics/09_booleans.py
 """
 
-
 # ---------------------------------------------------------------------------
 # Problem 1: Truthiness table
 # Given a list of assorted values, return a list of (value, bool(value)) pairs
@@ -41,7 +40,6 @@ import re
 
 def problem_1(values=(0, 1, "", "hi", [], [0], None, 3.14)):
     return [(value, bool(value)) for value in values]
-    
 
 
 # ---------------------------------------------------------------------------
@@ -68,10 +66,10 @@ def problem_2(year=2024):
 # ---------------------------------------------------------------------------
 def problem_3(numbers=(2, 4, 6, -1)):
     return {
-       "all_positive" : all(n > 0 for n in numbers),
-       "any_negative" : any(n < 0 for n in numbers),
-       "all_even" : all(n % 2 == 0 for n in numbers),
-       "has_zero" : any(n == 0 for n in numbers),
+        "all_positive": all(n > 0 for n in numbers),
+        "any_negative": any(n < 0 for n in numbers),
+        "all_even": all(n % 2 == 0 for n in numbers),
+        "has_zero": any(n == 0 for n in numbers),
     }
 
 

@@ -47,7 +47,7 @@ def problem_1(a=17, b=5):
         "true_div": a / b,
         "floor_div": a // b,
         "remainder": a % b,
-        "power": a ** b,
+        "power": a**b,
     }
 
 
@@ -77,8 +77,8 @@ def problem_2(total_seconds=3661):
 def problem_3(n=42):
     return {
         "in_range": 0 <= n <= 100,
-        "is_even":n % 2 == 0,
-        "sign": 'positive' if n > 0 else 'nevetive',
+        "is_even": n % 2 == 0,
+        "sign": "positive" if n > 0 else "nevetive",
         "is_none": n is None,
     }
 

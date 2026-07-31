@@ -45,7 +45,6 @@ Notes
 Run:  python3 chapters/01_basics/14_dictionaries.py
 """
 
-
 # ---------------------------------------------------------------------------
 # Problem 1: Safe reads and writes
 # Start from a copy of the given dict, then:
@@ -63,16 +62,15 @@ from itertools import count
 import statistics
 
 
-def problem_1(person = {"name": "Ana", "age": 30}):
+def problem_1(person={"name": "Ana", "age": 30}):
     copy_person = copy(person)
 
-    copy_person['city'] = 'Dhaka'
-    copy_person.update({"age" : 31})
+    copy_person["city"] = "Dhaka"
+    copy_person.update({"age": 31})
     copy_person.pop("email", None)
 
     return (copy_person, copy_person.get("phone", "unknown"))
 
-    
 
 # ---------------------------------------------------------------------------
 # Problem 2: Counting and inverting
@@ -89,17 +87,17 @@ def problem_1(person = {"name": "Ana", "age": 30}):
 # ---------------------------------------------------------------------------
 def problem_2(sentence="the cat and the hat and the bat"):
     words = sentence.split(" ")
-    counts = {word : sentence.count(word) for word in words}
+    counts = {word: sentence.count(word) for word in words}
     by_count = {}
 
     for word, count in counts.items():
         by_count.setdefault(count, []).append(word)
 
     return {
-        "counts" : counts,
-        "most_common" : max(counts.keys()),
-        "by_count" : by_count,
-        "singles": by_count.get(1)
+        "counts": counts,
+        "most_common": max(counts.keys()),
+        "by_count": by_count,
+        "singles": by_count.get(1),
     }
 
 
@@ -118,28 +116,27 @@ def problem_2(sentence="the cat and the hat and the bat"):
 #     class_average 68.8)
 # ---------------------------------------------------------------------------
 def problem_3(grades={"ana": [90, 80], "bob": [50, 55]}):
-      avg_dicts = {}
+    avg_dicts = {}
 
-      for k, v in grades.items():
-          avg_dicts[k] = float(f"{statistics.mean(grades[k]):.1f}")
+    for k, v in grades.items():
+        avg_dicts[k] = float(f"{statistics.mean(grades[k]):.1f}")
 
-      print(avg_dicts)
+    print(avg_dicts)
 
-      pass_dicts = {}
-      for k, v in avg_dicts.items():
-          pass_dicts[k] = v > 60
+    pass_dicts = {}
+    for k, v in avg_dicts.items():
+        pass_dicts[k] = v > 60
 
-      ret_str = ""
+    ret_str = ""
 
-      for k, v in avg_dicts.items():
-          ret_str += f"{k} average {v} passed {pass_dicts[k]} "
+    for k, v in avg_dicts.items():
+        ret_str += f"{k} average {v} passed {pass_dicts[k]} "
 
+    class_avg = sum(avg_dicts.values()) / len(avg_dicts)
 
-      class_avg = sum(avg_dicts.values()) / len(avg_dicts)
+    ret_str += f"class_average {class_avg:.1f}"
 
-      ret_str += f"class_average {class_avg:.1f}"
-
-      return ret_str
+    return ret_str
 
 
 if __name__ == "__main__":

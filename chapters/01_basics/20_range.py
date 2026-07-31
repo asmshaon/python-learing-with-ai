@@ -54,11 +54,11 @@ Run:  python3 chapters/01_basics/20_range.py
 # ---------------------------------------------------------------------------
 def problem_1():
     return {
-        'count': list(range(5)), 
-        'from_one': list(range(1, 11)), 
-        'odds': [n for n in range(1, 10, 2)],
-        'countdown': [n for n in range(10, 0, -1)],
-        'empty': list(range(5, 5))
+        "count": list(range(5)),
+        "from_one": list(range(1, 11)),
+        "odds": [n for n in range(1, 10, 2)],
+        "countdown": [n for n in range(10, 0, -1)],
+        "empty": list(range(5, 5)),
     }
 
 
@@ -82,13 +82,14 @@ def problem_2(start=0, stop=30, step=3):
     n = len(my_range)
 
     return {
-        "length" : len(my_range),
-        "first" : my_range[0],
-        "last" : my_range[len(my_range) - 1],
-        "third" : my_range[2],
-        "has_stop" : stop in my_range,
-        "middle" : list(my_range[n // 3 : 2 * n // 3])
+        "length": len(my_range),
+        "first": my_range[0],
+        "last": my_range[len(my_range) - 1],
+        "third": my_range[2],
+        "has_stop": stop in my_range,
+        "middle": list(my_range[n // 3 : 2 * n // 3]),
     }
+
 
 # ---------------------------------------------------------------------------
 # Problem 3: Ranges in real use
@@ -107,17 +108,18 @@ def problem_2(start=0, stop=30, step=3):
 # ---------------------------------------------------------------------------
 def problem_3():
     return {
-        "sum_evens" : sum(range(2, 101, 2)),
-        "squares" : [n * n for n in range(1, 11)],
-        "fizzbuzz" : [
-            "fizzbuzz" if n % 15 == 0
-            else "fizz" if n % 3 == 0
-            else "buzz" if n % 5 == 0
-            else n
+        "sum_evens": sum(range(2, 101, 2)),
+        "squares": [n * n for n in range(1, 11)],
+        "fizzbuzz": [
+            (
+                "fizzbuzz"
+                if n % 15 == 0
+                else "fizz" if n % 3 == 0 else "buzz" if n % 5 == 0 else n
+            )
             for n in range(1, 16)
         ],
-        "decimals" : [i / 4 for i in range(0, 5)],
-        "chunks" : [list(range(i, i + 3 if i < 10 else i + 1)) for i in range(1, 11, 3)],
+        "decimals": [i / 4 for i in range(0, 5)],
+        "chunks": [list(range(i, i + 3 if i < 10 else i + 1)) for i in range(1, 11, 3)],
     }
 
 

@@ -33,7 +33,6 @@ Notes
 Run:  python3 chapters/01_basics/11_lists.py
 """
 
-
 # ---------------------------------------------------------------------------
 # Problem 1: Build and mutate a list
 # Start from a copy of the given list, then:
@@ -57,7 +56,6 @@ def problem_1(nums=(3, 1, 4, 1, 5)):
     return cp_list
 
 
-
 # ---------------------------------------------------------------------------
 # Problem 2: Summary statistics
 # Given a list of numbers, return a dict describing it:
@@ -72,12 +70,12 @@ def problem_2(numbers=(5, 2, 5, 8, 1)):
     numbers = list(numbers)
 
     return {
-        'length' : len(numbers),
-        'total' : sum(numbers),
-        'smallest' : min(numbers),
-        'largest' : max(numbers),
-        'sorted_desc' : sorted(numbers, reverse=True),
-        'unique' : set(numbers),
+        "length": len(numbers),
+        "total": sum(numbers),
+        "smallest": min(numbers),
+        "largest": max(numbers),
+        "sorted_desc": sorted(numbers, reverse=True),
+        "unique": set(numbers),
     }
 
 
@@ -91,9 +89,9 @@ def problem_2(numbers=(5, 2, 5, 8, 1)):
 #  -> expected ([1, 4, 9, 16], [2, 4], ['odd', 'even', 'odd', 'even']))
 # ---------------------------------------------------------------------------
 def problem_3(numbers=(1, 2, 3, 4)):
-    squares = [n ** 2 for n in numbers]
+    squares = [n**2 for n in numbers]
     evens = [n for n in numbers if n % 2 == 0]
-    labels = ['even' if n % 2 != 0 else 'odd' for n in numbers]
+    labels = ["even" if n % 2 != 0 else "odd" for n in numbers]
 
     return (squares, evens, labels)
 
