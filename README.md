@@ -61,9 +61,9 @@ you learn, or ask Claude to work through them with you.
 | 16  | Match             | ✅     |
 | 17  | While Loops       | ✅     |
 | 18  | For Loops         | ✅     |
-| 19  | Functions         | ⬜     |
-| 20  | Range             | ⬜     |
-| 21  | Arrays            | ⬜     |
+| 19  | Functions         | ✅     |
+| 20  | Range             | ✅     |
+| 21  | Arrays            | ✅     |
 | 22  | Iterators         | ⬜     |
 | 23  | Modules           | ⬜     |
 | 24  | Dates             | ⬜     |
