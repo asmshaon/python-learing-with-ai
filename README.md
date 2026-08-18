@@ -64,9 +64,9 @@ you learn, or ask Claude to work through them with you.
 | 19  | Functions         | ✅     |
 | 20  | Range             | ✅     |
 | 21  | Arrays            | ✅     |
-| 22  | Iterators         | ⬜     |
-| 23  | Modules           | ⬜     |
-| 24  | Dates             | ⬜     |
+| 22  | Iterators         | ✅     |
+| 23  | Modules           | ✅     |
+| 24  | Dates             | ✅     |
 | 25  | Math              | ⬜     |
 | 26  | JSON              | ⬜     |
 | 27  | RegEx             | ⬜     |
