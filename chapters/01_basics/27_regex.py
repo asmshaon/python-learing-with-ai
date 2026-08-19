@@ -226,6 +226,6 @@ def problem_3():
 
 
 if __name__ == "__main__":
-    # print("Problem 1 (find + match):", problem_1())
-    # print("Problem 2 (groups + sub):", problem_2())
+    print("Problem 1 (find + match):", problem_1())
+    print("Problem 2 (groups + sub):", problem_2())
     print("Problem 3 (validation):", problem_3())
