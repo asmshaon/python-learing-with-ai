@@ -141,8 +141,21 @@ def problem_1():
 #  (The exact path in "create" depends on your sys.executable.)
 # ---------------------------------------------------------------------------
 def problem_2():
-    # TODO: fill in your solution
-    pass
+    dir = "proj/.venv"
+    return {
+        "create": [sys.executable, "-m", "venv", ".venv"],
+        "python_bin": os.path.join(dir, "bin", "python3"),
+        "pip_bin": os.path.join(dir, "bin", "pip"),
+        "isolated": "include-system-site-packages = false",
+        "freeze": [os.path.join(dir, "bin", "pip"), "freeze"],
+        "install": [
+            os.path.join(dir, "bin", "pip"),
+            "install",
+            "-r",
+            "requirements.txt",
+        ],
+        "activated": {"prefix": "/proj/.venv", "base": "/usr"},
+    }
 
 
 # ---------------------------------------------------------------------------
@@ -175,8 +188,46 @@ def problem_2():
 #             'deactivate': 'deactivate', 'gitignore': '.venv/'})
 # ---------------------------------------------------------------------------
 def problem_3():
-    # TODO: fill in your solution
-    pass
+    freeze_blob = """
+# This is a comment line
+requests==2.31.0
+rich==13.7.0
+numpy==1.26.0
+# Another comment
+"""
+
+    def parse_freeze(text):
+        mapping = {}
+        for line in text.strip().splitlines():
+            line = line.strip()
+            if "==" in line:
+                name, version = line.split("==", 1)
+                mapping[name] = version
+        return mapping
+
+    def pin(mapping):
+        return sorted(f"{name}=={version}" for name, version in mapping.items())
+
+    def installed(frozen, wanted):
+        return [name for name in wanted if name not in frozen]
+
+    def activate_prompt(env_name):
+        return f"source {env_name}/bin/activate"
+
+    def deactivate_prompt():
+        return "deactivate"
+
+    def gitignore_line():
+        return ".venv/"
+
+    return {
+        "frozen": parse_freeze(freeze_blob),
+        "pinned": pin({"rich": "13.7.0", "numpy": "1.26.0"}),
+        "still_missing": installed({"requests": "2.31.0"}, ["rich", "requests"]),
+        "activate": activate_prompt(".venv"),
+        "deactivate": deactivate_prompt(),
+        "gitignore": gitignore_line(),
+    }
 
 
 if __name__ == "__main__":
