@@ -67,17 +67,32 @@ you learn, or ask Claude to work through them with you.
 | 22  | Iterators         | ✅     |
 | 23  | Modules           | ✅     |
 | 24  | Dates             | ✅     |
-| 25  | Math              | ⬜     |
-| 26  | JSON              | ⬜     |
-| 27  | RegEx             | ⬜     |
-| 28  | PIP               | ⬜     |
-| 29  | Try...Except      | ⬜     |
-| 30  | String Formatting | ⬜     |
-| 31  | None              | ⬜     |
-| 32  | User Input        | ⬜     |
-| 33  | VirtualEnv        | ⬜     |
+| 25  | Math              | ✅     |
+| 26  | JSON              | ✅     |
+| 27  | RegEx             | ✅     |
+| 28  | PIP               | ✅     |
+| 29  | Try...Except      | ✅     |
+| 30  | String Formatting | ✅     |
+| 31  | None              | ✅     |
+| 32  | User Input        | ✅     |
+| 33  | VirtualEnv        | ✅     |
 
-(Later sections 02–07 are scaffolded too — mark them off in the same way.)
+## Progress — Object-Oriented Programming (Section 02)
+
+| #   | Chapter            | Status |
+| --- | ------------------ | ------ |
+| 01  | Python OOP         | ✅     |
+| 02  | Classes/Objects    | ✅     |
+| 03  | init Method        | ✅     |
+| 04  | self Parameter     | 📝     |
+| 05  | Class Properties   | 📝     |
+| 06  | Class Methods      | 📝     |
+| 07  | Inheritance        |        |
+| 08  | Polymorphism       |        |
+| 09  | Encapsulation      |        |
+| 10  | Inner Classes      |        |
+
+(Later sections 03–07 are scaffolded too — mark them off in the same way.)
 
 ## Notes on some sections
 
