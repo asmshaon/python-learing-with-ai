@@ -20,7 +20,10 @@ Run:  python3 chapters/02_oop/05_class_properties.py
 #   Output: 4
 # ---------------------------------------------------------------------------
 def problem_1():
-    pass
+    class Dog:
+        MAX_LEGS = 4
+
+    return Dog.MAX_LEGS
 
 
 # ---------------------------------------------------------------------------
@@ -29,7 +32,19 @@ def problem_1():
 #   Output: 5
 # ---------------------------------------------------------------------------
 def problem_2():
-    pass
+    class Player:
+        total = 0
+
+        def __init__(self):
+            Player.total += 1
+
+    p1 = Player()
+    p2 = Player()
+    p3 = Player()
+    p4 = Player()
+    p5 = Player()
+
+    return Player.total
 
 
 # ---------------------------------------------------------------------------
@@ -38,7 +53,14 @@ def problem_2():
 #   Output: (8080, 3000)
 # ---------------------------------------------------------------------------
 def problem_3():
-    pass
+    class Server:
+        port = 3000
+
+    s1 = Server()
+    s2 = Server()
+    s1.port = 8080
+
+    return (s1.port, s2.port)
 
 
 if __name__ == "__main__":

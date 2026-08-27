@@ -87,10 +87,10 @@ you learn, or ask Claude to work through them with you.
 | 04  | self Parameter     | 📝     |
 | 05  | Class Properties   | 📝     |
 | 06  | Class Methods      | 📝     |
-| 07  | Inheritance        |        |
-| 08  | Polymorphism       |        |
-| 09  | Encapsulation      |        |
-| 10  | Inner Classes      |        |
+| 07  | Inheritance        | 📝     |
+| 08  | Polymorphism       | 📝     |
+| 09  | Encapsulation      | 📝     |
+| 10  | Inner Classes      | 📝     |
 
 (Later sections 03–07 are scaffolded too — mark them off in the same way.)
 
