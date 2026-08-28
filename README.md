@@ -94,6 +94,15 @@ you learn, or ask Claude to work through them with you.
 
 (Later sections 03–07 are scaffolded too — mark them off in the same way.)
 
+## Progress — File Handling (Section 03)
+
+| #   | Chapter              | Status |
+| --- | -------------------- | ------ |
+| 01  | File Handling        | 📝     |
+| 02  | Read Files           | 📝     |
+| 03  | Write/Create Files   | 📝     |
+| 04  | Delete Files         | 📝     |
+
 ## Notes on some sections
 
 - **Setup topics** (PIP, VirtualEnv, User Input): these involve the terminal or
