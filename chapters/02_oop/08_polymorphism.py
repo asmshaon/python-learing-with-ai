@@ -20,7 +20,15 @@ Run:  python3 chapters/02_oop/08_polymorphism.py
 #   Output: ["Woof!", "Meow!"]
 # ---------------------------------------------------------------------------
 def problem_1():
-    pass
+    class Dog:
+        def speak(self):
+            return "Woof!"
+
+    class Cat:
+        def speak(self):
+            return "Meow!"
+
+    return [animal.speak() for animal in [Dog(), Cat()]]
 
 
 # ---------------------------------------------------------------------------
@@ -29,7 +37,14 @@ def problem_1():
 #   Output: 35
 # ---------------------------------------------------------------------------
 def problem_2():
-    pass
+    class Price:
+        def __init__(self, value):
+            self.value = value
+
+    def total(prices):
+        return sum(price.value for price in prices)
+
+    return total([Price(10), Price(20), Price(5)])
 
 
 # ---------------------------------------------------------------------------
@@ -38,7 +53,23 @@ def problem_2():
 #           describe(Bike("Trek"))  -> "A bike"
 # ---------------------------------------------------------------------------
 def problem_3():
-    pass
+    class Car:
+        def __init__(self, name):
+            self.name = name
+
+    class Bike:
+        def __init__(self, name):
+            self.name = name
+
+    def describe(vehicle):
+        if isinstance(vehicle, Car):
+            return "A car"
+        elif isinstance(vehicle, Bike):
+            return "A bike"
+        else:
+            return "Unknown vehicle"
+
+    return describe(Car("Toyota")), describe(Bike("Trek"))
 
 
 if __name__ == "__main__":

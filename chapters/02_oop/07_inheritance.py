@@ -14,14 +14,33 @@ Notes
 Run:  python3 chapters/02_oop/07_inheritance.py
 """
 
-
 # ---------------------------------------------------------------------------
 # Problem 1: Create a child class that inherits a method from parent
 #   Input:  Dog("Rex").speak()
 #   Output: "Rex says Woof!"
 # ---------------------------------------------------------------------------
+
+
+from django.conf.locale import ca
+
+
 def problem_1():
-    pass
+
+    class Animal:
+        def speak(self):
+            pass
+
+    class Dog(Animal):
+
+        def __init__(self, name):
+            self.name = name
+
+        def speak(self):
+            return f"{self.name} says Woof!"
+
+    d = Dog("Rex")
+
+    return d.speak()
 
 
 # ---------------------------------------------------------------------------
@@ -31,7 +50,28 @@ def problem_1():
 #           Cat("Luna").leg_count() -> 4
 # ---------------------------------------------------------------------------
 def problem_2():
-    pass
+    class Animal:
+
+        def speak(self):
+            pass
+
+        def leg_count(self):
+            return 4
+
+    class Cat(Animal):
+
+        def __init__(self, name):
+            self.name = name
+
+        def speak(self):
+            return f"{self.name} says Meow!"
+
+        def leg_count(self):
+            return super().leg_count()
+
+    cat = Cat("Luna")
+
+    return cat.speak()
 
 
 # ---------------------------------------------------------------------------
@@ -40,7 +80,24 @@ def problem_2():
 #   Output: "Tesla, battery: 75kWh, wheels: 4"
 # ---------------------------------------------------------------------------
 def problem_3():
-    pass
+    class Car:
+        def __init__(self, name, battery):
+            self.name = name
+            self.battery = battery
+
+        def info(self):
+            return f"{self.name}, battery: {self.battery}kWh"
+
+    class ElectricCar(Car):
+        def __init__(self, name, battery):
+            super().__init__(name, battery)
+
+        def info(self):
+            return f"{super().info()}, wheels: 4"
+
+    car = ElectricCar("Tesla", 75)
+
+    return car.info()
 
 
 if __name__ == "__main__":
