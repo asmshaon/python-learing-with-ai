@@ -103,6 +103,16 @@ you learn, or ask Claude to work through them with you.
 | 03  | Write/Create Files   | 📝     |
 | 04  | Delete Files         | 📝     |
 
+## Progress — Popular Python Libraries (Section 04)
+
+| #   | Chapter              | Status |
+| --- | -------------------- | ------ |
+| 01  | NumPy Tutorial       | 📝     |
+| 02  | Pandas Tutorial      | 📝     |
+| 03  | SciPy Tutorial       | 📝     |
+| 04  | Django Tutorial      | 📝     |
+| 05  | Matplotlib           |        |
+
 ## Notes on some sections
 
 - **Setup topics** (PIP, VirtualEnv, User Input): these involve the terminal or
