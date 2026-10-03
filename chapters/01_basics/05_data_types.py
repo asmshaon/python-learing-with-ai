@@ -41,10 +41,6 @@ Run:  python3 chapters/01_basics/05_data_types.py
 #  -> expected ['int', 'float', 'str', 'bool', 'NoneType', 'list', 'tuple',
 #               'set', 'dict'])
 # ---------------------------------------------------------------------------
-from attr import mutable
-from pyrsistent import v
-
-
 def problem_1(values=(1, 1.5, "hi", True, None, [1], (1,), {1}, {"a": 1})):
     return [type(value).__name__ for value in values]
 

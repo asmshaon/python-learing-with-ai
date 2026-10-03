@@ -1,45 +1,113 @@
-# Learning Python — Full Curriculum
+# Learning Python with AI
 
-Self-study repo following the complete Python track (basics → OOP → files →
-libraries → machine learning → DSA → databases).
+![Python](https://img.shields.io/badge/Python-3.12%2B-3776AB?logo=python&logoColor=white)
+![Chapters done](https://img.shields.io/badge/chapters%20done-47%20%2F%2097-2ea44f)
+![Status](https://img.shields.io/badge/status-in%20progress-orange)
 
-**Each chapter gets its own file** under `chapters/<section>/`, containing:
+My hands-on study log for the full Python curriculum, from the first `print()`
+to machine learning, data structures and databases. I use an AI pair
+(Claude) as a tutor: it helps me read up on each topic, design practice
+problems and review my solutions. **I write and run the code myself.**
 
-1. **Notes** — short explanation of the concept (in the file's top docstring).
-2. **3 problems** — `problem_1/2/3()`, each with a worked solution.
-3. A `__main__` block that runs and prints all three.
+> **Why share it?** Learning in public keeps me consistent. Every chapter is a
+> small, runnable file, so you can see exactly what I practised and how I
+> solved it.
 
-## Run a chapter
+---
 
-```bash
-python3 chapters/01_basics/01_syntax.py
+## Progress at a glance
+
+| #   | Section                      | Folder                                                         | Done        | Status         |
+| --- | ---------------------------- | -------------------------------------------------------------- | ----------- | -------------- |
+| 01  | Python Basics                | [`01_basics/`](chapters/01_basics/)                            | 33 / 33     | ✅ Complete    |
+| 02  | Object-Oriented Programming  | [`02_oop/`](chapters/02_oop/)                                  | 10 / 10     | ✅ Complete    |
+| 03  | File Handling                | [`03_file_handling/`](chapters/03_file_handling/)              | 4 / 4       | ✅ Complete    |
+| 04  | Popular Libraries            | [`04_libraries/`](chapters/04_libraries/)                      | 0 / 5       | 🚧 In progress |
+| 05  | Machine Learning             | [`05_machine_learning/`](chapters/05_machine_learning/)        | 0 / 23      | ⏳ Planned     |
+| 06  | Data Structures & Algorithms | `06_dsa/`                                                      | 0 / 20      | ⏳ Planned     |
+| 07  | Databases                    | `07_databases/`                                                | 0 / 2       | ⏳ Planned     |
+|     | **Total**                    |                                                                | **47 / 97** |                |
+
+---
+
+## How each chapter works
+
+Every chapter is **one self-contained Python file** with the same layout:
+
+1. **Notes**: the module docstring summarises the concept, key syntax and
+   common gotchas. It works as a cheat sheet I can come back to.
+2. **Three problems** (`problem_1()`, `problem_2()`, `problem_3()`), each with
+   a worked solution that **returns** its result so it can be tested.
+3. **A `__main__` block** that runs all three and prints the answers.
+
+A short excerpt from
+[`14_dictionaries.py`](chapters/01_basics/14_dictionaries.py):
+
+```python
+"""
+Chapter 14: Python Dictionaries
+...
+- person.get("email", "-")   returns the fallback "-" instead of raising
+- b = a does NOT copy. Use a.copy() for a shallow copy,
+  copy.deepcopy(a) for a full copy.
+"""
+
+# Problem 1: Safe reads and writes
+#   (Test with {"name": "Ana", "age": 30}
+#    -> expected ({'name': 'Ana', 'age': 31, 'city': 'Dhaka'}, 'unknown'))
+def problem_1(): ...
 ```
 
-## Start a new chapter
+---
 
-Copy the template and fill it in:
+## Run it yourself
+
+The chapters for sections 01–03 use **only the standard library**:
 
 ```bash
-cp chapters/_template.py chapters/01_basics/05_data_types.py
+git clone https://github.com/asmshaon/python-learing-with-ai.git
+cd python-learing-with-ai
+
+python3 chapters/01_basics/01_syntax.py          # run one chapter
+
+# run every chapter as a quick smoke test
+find chapters -name '*.py' -not -name '_template.py' -not -path '*/rough-khata/*' \
+  -exec python3 {} \;
 ```
 
-## Sections
+Sections 04 (libraries), 05 (ML) and 07 (databases) need third-party packages:
 
-| #   | Section                      | Folder                                                         | Chapters |
-| --- | ---------------------------- | -------------------------------------------------------------- | -------- |
-| 01  | Basics                       | [chapters/01_basics/](chapters/01_basics/)                     | 33       |
-| 02  | Object-Oriented Programming  | [chapters/02_oop/](chapters/02_oop/)                           | 10       |
-| 03  | File Handling                | [chapters/03_file_handling/](chapters/03_file_handling/)       | 4        |
-| 04  | Popular Libraries            | [chapters/04_libraries/](chapters/04_libraries/)               | 5        |
-| 05  | Machine Learning             | [chapters/05_machine_learning/](chapters/05_machine_learning/) | 23       |
-| 06  | Data Structures & Algorithms | [chapters/06_dsa/](chapters/06_dsa/)                           | 20       |
-| 07  | Databases                    | [chapters/07_databases/](chapters/07_databases/)               | 2        |
+```bash
+python3 -m venv .venv && source .venv/bin/activate
+pip install -r requirements.txt
+```
 
-Each `chapters/<section>/` file is numbered in curriculum order. Files start as
-scaffolds (notes + 3 empty `problem_*` functions marked `TODO`); fill them in as
-you learn, or ask Claude to work through them with you.
+To start a new chapter, copy [`chapters/_template.py`](chapters/_template.py).
 
-## Progress — Basics (Section 01)
+---
+
+## Repository layout
+
+```text
+chapters/
+├── _template.py            # starting point for every chapter
+├── 01_basics/              # 01_syntax.py … 33_virtualenv.py
+├── 02_oop/                 # classes, inheritance, polymorphism, encapsulation …
+├── 03_file_handling/       # open / read / write / delete files
+├── 04_libraries/           # NumPy, pandas, SciPy, Django, Matplotlib
+│   ├── data/               # sample CSVs used by the pandas practice
+│   ├── *_practice.ipynb    # Jupyter notebooks for exploratory practice
+│   └── *_scratch.py        # quick experiments
+├── 05_machine_learning/
+└── rough-khata/            # rough notebook ("khata"): asyncio and other experiments
+```
+
+---
+
+## Detailed progress
+
+<details>
+<summary><b>01 · Python Basics</b> (33 / 33) ✅</summary>
 
 | #   | Chapter           | Status |
 | --- | ----------------- | ------ |
@@ -77,56 +145,86 @@ you learn, or ask Claude to work through them with you.
 | 32  | User Input        | ✅     |
 | 33  | VirtualEnv        | ✅     |
 
-## Progress — Object-Oriented Programming (Section 02)
+</details>
+
+<details>
+<summary><b>02 · Object-Oriented Programming</b> (10 / 10) ✅</summary>
+
+| #   | Chapter          | Status |
+| --- | ---------------- | ------ |
+| 01  | Python OOP       | ✅     |
+| 02  | Classes/Objects  | ✅     |
+| 03  | `__init__` Method | ✅    |
+| 04  | self Parameter   | ✅     |
+| 05  | Class Properties | ✅     |
+| 06  | Class Methods    | ✅     |
+| 07  | Inheritance      | ✅     |
+| 08  | Polymorphism     | ✅     |
+| 09  | Encapsulation    | ✅     |
+| 10  | Inner Classes    | ✅     |
+
+</details>
+
+<details>
+<summary><b>03 · File Handling</b> (4 / 4) ✅</summary>
 
 | #   | Chapter            | Status |
 | --- | ------------------ | ------ |
-| 01  | Python OOP         | ✅     |
-| 02  | Classes/Objects    | ✅     |
-| 03  | init Method        | ✅     |
-| 04  | self Parameter     | 📝     |
-| 05  | Class Properties   | 📝     |
-| 06  | Class Methods      | 📝     |
-| 07  | Inheritance        | 📝     |
-| 08  | Polymorphism       | 📝     |
-| 09  | Encapsulation      | 📝     |
-| 10  | Inner Classes      | 📝     |
+| 01  | File Handling      | ✅     |
+| 02  | Read Files         | ✅     |
+| 03  | Write/Create Files | ✅     |
+| 04  | Delete Files       | ✅     |
 
-(Later sections 03–07 are scaffolded too — mark them off in the same way.)
+</details>
 
-## Progress — File Handling (Section 03)
+<details open>
+<summary><b>04 · Popular Libraries</b> (0 / 5) 🚧</summary>
 
-| #   | Chapter              | Status |
-| --- | -------------------- | ------ |
-| 01  | File Handling        | 📝     |
-| 02  | Read Files           | 📝     |
-| 03  | Write/Create Files   | 📝     |
-| 04  | Delete Files         | 📝     |
+| #   | Chapter        | Status                                     |
+| --- | -------------- | ------------------------------------------ |
+| 01  | NumPy          | 🚧 practising in `numpy_practice.ipynb`    |
+| 02  | pandas         | 🚧 practising in `pandas_practice.ipynb`   |
+| 03  | SciPy          | 🚧 practising in `scipy_practice.ipynb`    |
+| 04  | Django         | 📝 scaffolded                              |
+| 05  | Matplotlib     | ⏳ planned                                 |
 
-## Progress — Popular Python Libraries (Section 04)
+</details>
 
-| #   | Chapter              | Status |
-| --- | -------------------- | ------ |
-| 01  | NumPy Tutorial       | 📝     |
-| 02  | Pandas Tutorial      | 📝     |
-| 03  | SciPy Tutorial       | 📝     |
-| 04  | Django Tutorial      | 📝     |
-| 05  | Matplotlib           |        |
+<details>
+<summary><b>05 · Machine Learning</b> (0 / 23) ⏳</summary>
 
-## Notes on some sections
+Getting Started · Mean, Median, Mode · Standard Deviation · Percentile ·
+Data Distribution · Normal Data Distribution · Scatter Plot · Linear Regression ·
+Polynomial Regression · Multiple Regression · Scale · Train/Test · Decision Tree ·
+Confusion Matrix · Hierarchical Clustering · Logistic Regression · Grid Search ·
+Categorical Data · K-means · Bootstrap Aggregation · Cross Validation ·
+AUC-ROC Curve · K-Nearest Neighbors
 
-- **Setup topics** (PIP, VirtualEnv, User Input): these involve the terminal or
-  interactive input; the "problems" focus on the commands / small snippets.
-- **Libraries (04)** and **Machine Learning (05)** need third-party packages.
-  Install them into a virtual environment first — see `requirements.txt`.
-- **Databases (07)** need a running MySQL / MongoDB server and their drivers.
+</details>
 
-## Reading-only pages (no code file)
+<details>
+<summary><b>06 · Data Structures & Algorithms</b> (0 / 20) ⏳</summary>
 
-These curriculum entries are reference/practice pages rather than coding
-chapters, so they don't get a file: Python Home, Intro, Get Started,
-Certificate, Reference, Module Reference, How To, Examples, Compiler,
-Exercises, Quiz, Challenges, Practice Problems, Server, Syllabus, Study Plan,
-Interview Q&A, Bootcamp, Training.
+Python DSA · Lists and Arrays · Stacks · Queues · Linked Lists · Hash Tables ·
+Trees · Binary Trees · Binary Search Trees · AVL Trees · Graphs · Linear Search ·
+Binary Search · Bubble Sort · Selection Sort · Insertion Sort · Quick Sort ·
+Counting Sort · Radix Sort · Merge Sort
 
-# python-learing-with-ai
+</details>
+
+<details>
+<summary><b>07 · Databases</b> (0 / 2) ⏳</summary>
+
+Python MySQL · Python MongoDB
+
+</details>
+
+Legend: ✅ done · 🚧 in progress · 📝 scaffolded · ⏳ planned
+
+---
+
+## Connect
+
+I'm **Abu Saleh Muhammad Shaon**. If you're also learning Python, or have tips
+for the next sections, feel free to open an issue or reach out on LinkedIn.
+⭐ Star the repo if you'd like to follow along.
