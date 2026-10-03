@@ -1,0 +1,31 @@
+order_id,order_date,customer,country,category,product,quantity,unit_price,discount,shipped
+1001,2024-01-05,Alice Rahman,Bangladesh,Electronics,Wireless Mouse,3,24.50,0.00,True
+1002,2024-01-07,Bob Chen,Singapore,Electronics,Mechanical Keyboard,1,89.99,0.10,True
+1003,2024-01-11,Carla Gomez,Spain,Furniture,Office Chair,2,149.00,0.05,True
+1004,2024-01-15,Dmitri Ivanov,Russia,Stationery,Notebook A5,12,3.25,0.00,True
+1005,2024-01-18,Alice Rahman,Bangladesh,Stationery,Gel Pen Pack,5,7.80,0.00,False
+1006,2024-02-02,Emma Novak,Czechia,Electronics,USB-C Hub,4,39.95,0.15,True
+1007,2024-02-06,Farid Khan,Bangladesh,Furniture,Standing Desk,1,399.00,0.20,True
+1008,2024-02-09,Grace Lee,South Korea,Electronics,Webcam 1080p,2,,0.00,True
+1009,2024-02-14,Hiroshi Tanaka,Japan,Stationery,Sticky Notes,20,1.99,0.00,True
+1010,2024-02-21,Bob Chen,Singapore,Furniture,Bookshelf,1,120.00,0.00,False
+1011,2024-03-01,Isabel Cruz,Philippines,Electronics,Wireless Mouse,6,24.50,0.05,True
+1012,2024-03-03,Jonas Berg,Sweden,Stationery,Notebook A5,8,3.25,0.00,True
+1013,2024-03-08,Carla Gomez,Spain,Electronics,Noise Cancelling Headphones,1,249.99,0.10,True
+1014,2024-03-12,Karim Ali,Egypt,Furniture,Office Chair,4,149.00,0.12,True
+1015,2024-03-19,Grace Lee,South Korea,Stationery,Gel Pen Pack,3,7.80,0.00,True
+1016,2024-03-25,Liam O'Brien,Ireland,Electronics,Mechanical Keyboard,2,89.99,0.00,False
+1017,2024-04-02,Maya Patel,India,Furniture,Standing Desk,1,399.00,0.25,True
+1018,2024-04-05,Farid Khan,Bangladesh,Electronics,USB-C Hub,3,39.95,0.00,True
+1019,2024-04-11,,Brazil,Stationery,Sticky Notes,15,1.99,0.00,True
+1020,2024-04-16,Noah Smith,USA,Electronics,Webcam 1080p,1,59.00,0.05,True
+1021,2024-04-22,Olga Petrova,Russia,Furniture,Bookshelf,2,120.00,0.00,True
+1022,2024-05-01,Maya Patel,India,Electronics,Wireless Mouse,10,24.50,0.18,True
+1023,2024-05-04,Priya Nair,India,Stationery,Notebook A5,25,3.25,0.10,True
+1024,2024-05-09,Noah Smith,USA,Electronics,Noise Cancelling Headphones,1,249.99,0.00,False
+1025,2024-05-13,Quentin Dubois,France,Furniture,Office Chair,3,149.00,0.08,True
+1026,2024-05-20,Isabel Cruz,Philippines,Stationery,Gel Pen Pack,7,7.80,0.00,True
+1027,2024-06-02,Rania Haddad,Jordan,Electronics,Mechanical Keyboard,2,89.99,0.05,True
+1028,2024-06-07,Hiroshi Tanaka,Japan,Furniture,Standing Desk,1,399.00,0.00,True
+1029,2024-06-15,Sofia Rossi,Italy,Electronics,USB-C Hub,5,39.95,0.10,True
+1030,2024-06-28,Alice Rahman,Bangladesh,Stationery,Sticky Notes,30,1.99,0.05,
